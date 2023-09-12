@@ -78,3 +78,31 @@ var_dump( $y === $z);
 var_dump($y !== $z);
 var_dump($y != $z);
 
+// Traccia 5 (extra)
+  
+// Create un array associativo $corsoHackademy con chiavi: “docenti”, “studenti”, “argomenti”
+// con valore associato rispettivamente array contenenti i docenti, alcuni nomi di vostri colleghi, argomenti trattati durante il corso
+
+// Es.
+// $corsoHackademy = [ "docenti" => ["daniele", "emanuele"], "studenti" => ["pippo", "franco", "coppola"], "argomenti" => ["html", "css", "bootstrap", "javascript", "php"], ];
+
+// Usate questo array per stampare in console una frase di presentazione a piacere:
+// Es.
+// “Sono pippo e sto studiando bootstrap con daniele”
+
+$corsoHackademy = [ "docenti" => [ "il docente Andrea", "il docente Jeremy", "il docente Emanuele"], "studenti" => [ "Dario", "Tolotra", "io", "Cristiano", "Giovanni"], "materie" => [ "HTML5", "CSS3", "JS", "PHP"]];
+
+$presentazione = "Ciao sono " . $corsoHackademy["studenti"][0] . " e con i miei compagni" . " " . 
+//                   Ciao sono                   Dario             e con i miei compagni
+$corsoHackademy["studenti"][1] . ", " . $corsoHackademy["studenti"][3] . " e " . $corsoHackademy
+//                  Tolotra                           Cristiano           e        
+["studenti"][4] . " studio" . ": " . $corsoHackademy["materie"][0] . " e " . $corsoHackademy["materie"][1]
+// Giovanni         studio     :                 HTML5                e             CSS3
+ . " con " . $corsoHackademy["docenti"][0] . ", " . $corsoHackademy["materie"][2] . " con " .
+//  con      il docente  Andrea              ,                     JS                 con
+$corsoHackademy["docenti"][1] . " e infine " . $corsoHackademy["materie"][3] . " con " . $corsoHackademy
+//       il docente Jeremy       e infine                    PHP                con  
+["docenti"][2] . ".";
+// il docente Emanuele
+
+echo $presentazione;
