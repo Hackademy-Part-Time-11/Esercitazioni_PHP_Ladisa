@@ -19,16 +19,16 @@ function controlloPassword(string $password){
         //checkLength();
 
         if(!checkLength()){
-            "La password è troppo corta"
+            "La password è troppo corta";
         }
         if(!checkLength()){
-            "La password è troppo corta"
+            "La password è troppo corta";
         }
         if(!checkLength()){
-            "La password è troppo corta"
+            "La password è troppo corta";
         }
         if(!checkLength()){
-            "La password è troppo corta"
+            "La password è troppo corta";
         }
 
 }
