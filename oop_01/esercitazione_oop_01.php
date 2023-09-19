@@ -6,7 +6,7 @@ class Company
     public $name;
     public $location;
     public $tot_employees = 0;
-    public static $avg_wage = 1500;
+    public static $avg_wage = 2600;
     public static $totalCompaniesExpense = 0;
 
     public function __construct($name, $location, $tot_employees)
@@ -52,8 +52,8 @@ class Company
 
 $company1 = new Company("Sascha Web Services", "Emiirati Arabi", 7320);
 $company2 = new Company("Tolotra Web Graphics", "Giappone", 1);
-$company3 = new Company("Panificio Valletta", "Albania", 4);
-$company4 = new Company("Ingegnere Contabilità", "Korea del Nord", 0);
+$company3 = new Company("Valletta Delizie di Pane", "Albania", 4);
+$company4 = new Company("Ingegnere Contabilità Forense (anche illegale)", "Korea del Nord", 0);
 $company5 = new Company("Ladisa Durex Inc.", "USA", 69696);
 
 $company1->infoCompanies();
