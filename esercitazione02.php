@@ -149,19 +149,32 @@ for ($i = 0; $i < 90; $i++) {
 }
 // print_r($numbers);
 
-
-$tombola = array();
-$subArray = array();
+$contatroie = -1;
 
 foreach ($numbers as $index => $number) {
-    if ($index % 10 === 0 && $index !== 0) {
-        $tombola[] = $subArray;
-        $subArray = array(); 
+    $resto = $index % 10; 
+    if ($resto === 0) {
+        $contatroie++;
+        $tombola[$contatroie][0] = $number;
+    } else {
+        $tombola[$contatroie][count($tombola[$contatroie])] = $number;
     }
-    $subArray[] = $index;
+    
 }
-
-if (!empty($subArray)) {
-    $tombola[] = $subArray;
-} 
 print_r($tombola);
+
+// $tombola = array();
+// $subArray = array();
+
+// foreach ($numbers as $index => $number) {
+//     if ($index % 10 === 0 && $index !== 0) {
+//         $tombola[] = $subArray;
+//         $subArray = array(); 
+//     }
+//     $subArray[] = $index;
+// }
+
+// if (!empty($subArray)) {
+//     $tombola[] = $subArray;
+// } 
+// print_r($tombola)
